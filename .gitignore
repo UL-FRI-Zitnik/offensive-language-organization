@@ -2,3 +2,4 @@ full_textOnly_dataset.csv
 .ipynb_checkpoints
 .vscode
 full_textOnly_cleaned_dataset.csv
+TwitterBearerToken.txt
