@@ -3,3 +3,5 @@ full_textOnly_dataset.csv
 .vscode
 full_textOnly_cleaned_dataset.csv
 TwitterBearerToken.txt
+models
+w2v_50dim_model_v2
