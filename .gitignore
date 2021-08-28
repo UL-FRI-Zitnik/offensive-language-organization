@@ -6,3 +6,8 @@ TwitterBearerToken.txt
 models
 w2v_50dim_model_v2
 full_classification_dataset.csv
+
+__pycache__
+fastText_25dim_model_v3*
+fastText_50dim_model_v2*
+w2v_25dim_model_v3

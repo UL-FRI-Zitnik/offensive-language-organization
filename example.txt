@@ -1,0 +1,2 @@
+# Check within all domain (using bests from single-ones)
+print("BLA")
