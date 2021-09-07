@@ -36,8 +36,12 @@ from pathlib import Path
 import warnings
 warnings.filterwarnings("ignore")
 
-def run_pairwise_analysis(device, MAX_LEN, datasets, dataset_definitions_list):
-    for dataset_trained in dataset_definitions_list:
+def run_pairwise_analysis(device, 
+                          MAX_LEN, 
+                          datasets, 
+                          dataset_definitions_list_trained,
+                          dataset_definitions_list_to_test):
+    for dataset_trained in dataset_definitions_list_trained:
         corpus_id_trained = dataset_trained[0]
         pos_label_trained = dataset_trained[1]
         neg_label_trained = dataset_trained[2]
@@ -46,12 +50,15 @@ def run_pairwise_analysis(device, MAX_LEN, datasets, dataset_definitions_list):
         print(f"Model - {dataset_trained}:\t", end="")
         sys.stdout.flush()
         
-        for dataset_tested in dataset_definitions_list:
+        for dataset_tested in dataset_definitions_list_to_test:
             corpus_id_tested = dataset_tested[0]
             pos_label_tested = dataset_tested[1]
             neg_label_tested = dataset_tested[2]
             
-            test_dataset = extract_dataset(datasets, corpus_id_tested, pos_label_tested, neg_label_tested)
+            test_dataset = extract_dataset(datasets, 
+                                           corpus_id_tested, 
+                                           pos_label_tested, 
+                                           neg_label_tested)
             f_1_tested = load_and_evaluate(device, 
                   MAX_LEN, 
                   model_path, 
