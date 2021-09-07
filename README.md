@@ -4,7 +4,7 @@ This repository accompanies the following journal paper (please cite if you use 
 
 *TBA*
 
---
+---
 
 ## Environment setup
 
